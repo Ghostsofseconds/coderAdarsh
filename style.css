@@ -1,0 +1,123 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Background Canvas */
+#backgroundCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Main Container */
+.container {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Name & Bio */
+.name {
+    font-size: 2.5em;
+    margin-top: 20px;
+    animation: colorChange 5s infinite;
+}
+
+.bio {
+    font-size: 1.1em;
+    margin: 10px 0 40px;
+}
+
+/* Color animation for name */
+@keyframes colorChange {
+    0% { color: #fff; }
+    25% { color: #f39c12; }
+    50% { color: #e74c3c; }
+    75% { color: #2ecc71; }
+    100% { color: #fff; }
+}
+
+/* Skills Section */
+.skills, .projects, .contact {
+    margin: 40px auto;
+    max-width: 900px;
+    background: rgba(0,0,0,0.5);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.skills ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.skills h2, .projects h2, .contact h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-decoration: underline;
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+/* Contact Section */
+.contact a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
